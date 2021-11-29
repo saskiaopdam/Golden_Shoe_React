@@ -2,6 +2,8 @@
   flex-shrink: 0;
   padding: 64px 20px 0 20px;
   font-family: "Raleway", sans-serif;
+
+  background: white;
 }
 
 .Header-nav {
@@ -60,7 +62,7 @@
   padding: 10px;
   font-size: 14px;
   border: none;
-  background: #eee;
+  background: rgb(246, 248, 250);
 }
 
 .Header-search__field:focus {
@@ -87,10 +89,10 @@
 
   .Header-nav__loginLink,
   .Header-nav__cartLink {
-    margin-left: 24px;
+    margin-left: 18px;
   }
 
   .Header-search {
-    width: 600px;
+    width: 560px;
   }
 }

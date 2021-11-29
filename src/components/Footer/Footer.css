@@ -8,18 +8,18 @@
 }
 
 .Footer-copyright {
-  font-size: 14px;
+  font-size: 12px;
+  text-align: center;
 }
 
 .Footer-socialMedia {
   display: flex;
   height: 24px;
-  margin-bottom: 10px;
-  background: pink;
+  margin-bottom: 15px;
 }
 
 .Footer-socialMedia__link + .Footer-socialMedia__link {
-  margin-left: 24px;
+  margin-left: 18px;
 }
 
 .Footer-socialMedia__icon:hover {
