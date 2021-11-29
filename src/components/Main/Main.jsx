@@ -9,6 +9,7 @@ import Stores from "../Pages/Stores";
 import Careers from "../Pages/Careers";
 import Login from "../Pages/Login";
 import Cart from "../Pages/Cart";
+import FAQ from "../Pages/FAQ";
 
 function Main() {
   return (
@@ -18,6 +19,7 @@ function Main() {
       <Route path="/women" component={Women} />
       <Route path="/stores" component={Stores} />
       <Route path="/careers" component={Careers} />
+      <Route path="/FAQ" component={FAQ} />
       <Route path="/login" component={Login} />
       <Route path="/cart" component={Cart} />
     </div>

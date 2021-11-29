@@ -168,6 +168,9 @@ function Header() {
         >
           Careers
         </Link>
+        <Link className="Header-slideMenu__item" to="FAQ" onClick={closeSlide}>
+          FAQ
+        </Link>
 
         <hr className="Header-slideMenu__divider" />
 
