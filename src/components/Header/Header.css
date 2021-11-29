@@ -83,9 +83,9 @@
   position: fixed;
   background: #333;
   color: rgb(246, 248, 250);
-  top: 64px;
-  bottom: 64px;
+  /* top: 64px; */
   width: 100%;
+  min-height: 100vh;
   padding: 20px;
   left: -100%;
   transition: left 0.7s ease;

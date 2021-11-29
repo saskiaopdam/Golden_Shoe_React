@@ -172,7 +172,7 @@ function Header() {
           FAQ
         </Link>
 
-        <hr className="Header-slideMenu__divider" />
+        {/* <hr className="Header-slideMenu__divider" /> */}
 
         <Link
           className="Header-slideMenu__item Header-slideMenu__login"
