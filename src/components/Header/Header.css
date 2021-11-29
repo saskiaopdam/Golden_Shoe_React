@@ -2,7 +2,7 @@
   flex-shrink: 0;
   padding: 64px 20px 0 20px;
   font-family: "Raleway", sans-serif;
-  background: white;
+  /* background: white; */
 }
 
 .Header-nav {
@@ -16,7 +16,7 @@
   box-shadow: rgba(27, 31, 35, 0.15) 0px 1px 15px 0px;
   display: flex;
   justify-content: space-between;
-  background: white;
+  /* background: white; */
 }
 
 .Header-nav__burger {
@@ -76,23 +76,20 @@
 
 .Header-search__close {
   margin-top: 20px;
-  text-align: center;
 }
 
 .Header-slideMenu {
   position: fixed;
   background: #333;
   color: rgb(246, 248, 250);
-  /* top: 64px; */
   width: 100%;
-  min-height: 100vh;
+  top: 64px;
+  bottom: 0;
   padding: 20px;
   left: -100%;
   transition: left 0.7s ease;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .Header-slideMenu__item {
@@ -140,5 +137,15 @@
 
   .Header-search {
     width: 560px;
+  }
+
+  .Header-search__close {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .Header-slideMenu {
+    justify-content: center;
+    align-items: center;
   }
 }
