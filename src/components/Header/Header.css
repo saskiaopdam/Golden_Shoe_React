@@ -2,7 +2,6 @@
   flex-shrink: 0;
   padding: 64px 20px 0 20px;
   font-family: "Raleway", sans-serif;
-
   background: white;
 }
 
@@ -46,7 +45,7 @@
   color: black;
 }
 
-.Header-nav__toggleSearch,
+.Header-nav__openSearch,
 .Header-nav__loginLink {
   display: none;
 }
@@ -75,6 +74,53 @@
   right: 10px;
 }
 
+.Header-search__close {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.Header-slideMenu {
+  position: fixed;
+  background: #333;
+  color: rgb(246, 248, 250);
+  top: 64px;
+  bottom: 64px;
+  width: 100%;
+  padding: 20px;
+  left: -100%;
+  transition: left 0.7s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Header-slideMenu__item {
+  text-decoration: none;
+  color: rgb(246, 248, 250);
+  font-size: calc(16px + 0.5vmin);
+}
+
+.Header-slideMenu__item:hover {
+  opacity: 0.5;
+}
+
+.Header-slideMenu__item + .Header-slideMenu__item {
+  margin-top: calc(16px + 0.5vmin);
+}
+
+.Header-slideMenu__divider {
+  width: calc(200px + 0.5vmin);
+  margin: 20px auto;
+  height: 2px;
+  border: none;
+  background-color: rgb(246, 248, 250);
+}
+
+.Header-slideMenu__icon {
+  filter: invert(100%);
+}
+
 @media (min-width: 600px) {
   .Header-nav__brand {
     position: absolute;
@@ -82,7 +128,7 @@
     transform: translateX(-50%);
   }
 
-  .Header-nav__toggleSearch,
+  .Header-nav__openSearch,
   .Header-nav__loginLink {
     display: block;
   }
