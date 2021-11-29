@@ -1,0 +1,96 @@
+.Header {
+  flex-shrink: 0;
+  padding: 64px 20px 0 20px;
+  font-family: "Raleway", sans-serif;
+}
+
+.Header-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: 20px;
+  font-size: 24px;
+  box-shadow: rgba(27, 31, 35, 0.15) 0px 1px 15px 0px;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+}
+
+.Header-nav__burger {
+  height: 24px;
+}
+
+.Header-nav__brand {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  height: 24px;
+  margin: 0 20px;
+}
+
+.Header-nav__forms {
+  display: flex;
+  height: 24px;
+}
+
+.Header-nav__icon:hover {
+  opacity: 0.5;
+}
+
+.Header-nav__homeLink {
+  text-decoration: none;
+  color: black;
+}
+
+.Header-nav__toggleSearch,
+.Header-nav__loginLink {
+  display: none;
+}
+
+.Header-search {
+  position: relative;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.Header-search__field {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  background: #eee;
+}
+
+.Header-search__field:focus {
+  outline: none;
+}
+
+.Header-search__icon {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+}
+
+@media (min-width: 600px) {
+  .Header-nav__brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .Header-nav__toggleSearch,
+  .Header-nav__loginLink {
+    display: block;
+  }
+
+  .Header-nav__loginLink,
+  .Header-nav__cartLink {
+    margin-left: 24px;
+  }
+
+  .Header-search {
+    width: 600px;
+  }
+}

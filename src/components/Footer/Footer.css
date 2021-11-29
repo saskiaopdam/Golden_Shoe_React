@@ -1,0 +1,39 @@
+.Footer {
+  flex-shrink: 0;
+  background: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.Footer-copyright {
+  font-size: 14px;
+}
+
+.Footer-socialMedia {
+  display: flex;
+  height: 24px;
+  margin-bottom: 10px;
+  background: pink;
+}
+
+.Footer-socialMedia__link + .Footer-socialMedia__link {
+  margin-left: 24px;
+}
+
+.Footer-socialMedia__icon:hover {
+  opacity: 0.5;
+}
+
+@media (min-width: 600px) {
+  .Footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .Footer-socialMedia {
+    margin-bottom: 0;
+  }
+}
