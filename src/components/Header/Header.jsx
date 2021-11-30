@@ -118,12 +118,12 @@ function Header() {
 
       <div
         className="Header-search"
-        style={searchOpen ? { display: "block" } : { display: "none" }}
+        style={searchOpen ? { display: "flex" } : { display: "none" }}
       >
         <input
           className="Header-search__field"
           type="text"
-          placeholder="What are you looking for?"
+          placeholder="Search"
           aria-label="search field"
         />
         <svg
@@ -135,9 +135,9 @@ function Header() {
         >
           <path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z" />
         </svg>
-        <div className="Header-search__close" onClick={closeSearch}>
-          close search field
-        </div>
+        <span className="Header-search__close" onClick={closeSearch}>
+          X
+        </span>
       </div>
 
       <nav
@@ -210,12 +210,12 @@ function Header() {
 
         <div
           className="Header-search"
-          style={slideSearchOpen ? { display: "block" } : { display: "none" }}
+          style={slideSearchOpen ? { display: "flex" } : { display: "none" }}
         >
           <input
             className="Header-search__field"
             type="text"
-            placeholder="What are you looking for?"
+            placeholder="Search"
             aria-label="search field"
           />
 
@@ -229,9 +229,9 @@ function Header() {
             <path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z" />
           </svg>
 
-          <div className="Header-search__close" onClick={closeSlideSearch}>
-            close search field
-          </div>
+          <span className="Header-search__close" onClick={closeSlideSearch}>
+            X
+          </span>
         </div>
       </nav>
     </div>
