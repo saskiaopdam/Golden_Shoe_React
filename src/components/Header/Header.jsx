@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import "./Header.css";
 
-function Header() {
+function Header({ cartCount }) {
   const [searchOpen, setSearchOpen] = useState(false);
   const [slideOpen, setSlideOpen] = useState(false);
   const [slideSearchOpen, setSlideSearchOpen] = useState(false);
@@ -102,6 +102,7 @@ function Header() {
             </svg>
           </Link>
           <Link className="Header-nav__cartLink" to="cart">
+            <div className="Header-nav__cartLink-badge"> {cartCount}</div>
             <svg
               className="Header-nav__icon"
               xmlns="http://www.w3.org/2000/svg"

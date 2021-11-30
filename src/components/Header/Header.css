@@ -50,6 +50,24 @@
   display: none;
 }
 
+.Header-nav__cartLink {
+  position: relative;
+}
+
+.Header-nav__cartLink-badge {
+  width: 16px;
+  height: 16px;
+  font-size: 12px;
+  position: absolute;
+  top: -6px;
+  right: 14px;
+  color: black;
+  background: #ddd;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .Header-search {
   width: 100%;
   position: relative;

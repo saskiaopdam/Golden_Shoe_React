@@ -11,17 +11,61 @@ import Login from "../Pages/Login";
 import Cart from "../Pages/Cart";
 import FAQ from "../Pages/FAQ";
 
-function Main() {
+function Main({
+  // stock,
+  products,
+  cartItems,
+  onAdd,
+  onRemove,
+  // cartCount,
+  // shoeClicked,
+  // buttonClicked,
+  // stockCount,
+  // addToCart,
+  // showDetails,
+}) {
   return (
     <div className="Main">
-      <Route exact path="/" component={Home} />
-      <Route path="/men" component={Men} />
-      <Route path="/women" component={Women} />
-      <Route path="/stores" component={Stores} />
-      <Route path="/careers" component={Careers} />
-      <Route path="/FAQ" component={FAQ} />
-      <Route path="/login" component={Login} />
-      <Route path="/cart" component={Cart} />
+      <Route exact path="/">
+        <Home
+          // stock={stock}
+          products={products}
+          onAdd={onAdd}
+          // shoeClicked={shoeClicked}
+          // buttonClicked={buttonClicked}
+          // productId={productId}
+          // cartCount={cartCount}
+          // stockCount={stockCount}
+          // addToCart={addToCart}
+          // showDetails={showDetails}
+        />
+      </Route>
+      <Route exact path="/men">
+        <Men />
+      </Route>
+      <Route exact path="/women">
+        <Women />
+      </Route>
+      <Route exact path="/stores">
+        <Stores />
+      </Route>
+      <Route exact path="/careers">
+        <Careers />
+      </Route>
+      <Route exact path="/FAQ">
+        <FAQ />
+      </Route>
+      <Route exact path="/login">
+        <Login />
+      </Route>
+      <Route exact path="/cart">
+        <Cart
+          // cartCount={cartCount}
+          cartItems={cartItems}
+          onAdd={onAdd}
+          onRemove={onRemove}
+        />
+      </Route>
     </div>
   );
 }

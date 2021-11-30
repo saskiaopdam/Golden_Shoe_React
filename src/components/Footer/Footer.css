@@ -5,10 +5,10 @@
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+  font-size: calc(12px + 0.5vmin);
 }
 
 .Footer-copyright {
-  font-size: 12px;
   text-align: center;
 }
 
