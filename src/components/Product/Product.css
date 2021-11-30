@@ -1,22 +1,34 @@
+.Product {
+  background: white;
+  box-shadow: rgba(27, 31, 35, 0.15) 0px 1px 15px 0px;
+}
+
 .Product + .Product {
   margin-top: 40px;
+  background: white;
 }
 
 .Product__image {
   width: 100%;
 }
 
+.Product__brand {
+  padding: 20px 20px 10px 20px;
+}
+
+.Product__text {
+  padding: 5px 20px 0 20px;
+}
+
 .Product__button {
-  width: 100%;
   border: none;
-  padding: 5px;
-  margin-top: 5px;
-  border-radius: 5px;
+  padding: 10px;
+  margin: 20px;
 }
 
 @media (min-width: 600px) {
   .Product {
     width: 50%;
-    margin: 0 auto;
+    margin: 20px auto;
   }
 }

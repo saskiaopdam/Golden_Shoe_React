@@ -7,15 +7,14 @@ function Product({ product, onAdd }) {
         className="Product__image"
         src={product.image}
         alt={product.brand}
-      ></img>
-      <h2>{product.brand}</h2>
-      <p>{product.description}</p>
-      <p>${product.price}</p>
-      <div>
-        <button onClick={() => onAdd(product)} className="Product__button">
-          Add To Cart
-        </button>
-      </div>
+        img
+      />
+      <h2 className="Product__brand">{product.brand}</h2>
+      <p className="Product__text">{product.description}</p>
+      <p className="Product__text">${product.price}</p>
+      <button className="Product__button" onClick={() => onAdd(product)}>
+        Add To Cart
+      </button>
     </div>
   );
 }
