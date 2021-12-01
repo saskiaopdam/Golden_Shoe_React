@@ -13,13 +13,16 @@
   padding: 20px;
 }
 
+.Product__brand {
+  font-size: 1.25em;
+}
+
 .Product__details {
   position: absolute;
   top: 0;
   width: 100%;
   padding: 20px;
   background: transparent;
-  /* background: rgb(246, 248, 250); */
 }
 
 .Product__button {
@@ -27,11 +30,4 @@
   padding: 10px;
   margin-top: 20px;
   background: orange;
-  /* box-shadow: rgba(27, 31, 35, 0.15) 0px 1px 15px 0px; */
-}
-
-@media (min-width: 600px) {
-  .Product {
-    width: 280px;
-  }
 }

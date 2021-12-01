@@ -7,9 +7,10 @@ import Men from "../Pages/Men";
 import Women from "../Pages/Women";
 import Stores from "../Pages/Stores";
 import Careers from "../Pages/Careers";
-import Login from "../Pages/Login";
-import Cart from "../Pages/Cart";
 import FAQ from "../Pages/FAQ";
+import Login from "../Pages/Login";
+import Wishlist from "../Pages/Wishlist";
+import Cart from "../Pages/Cart";
 
 function Main({ products, cartItems, onAdd, onRemove }) {
   return (
@@ -34,6 +35,9 @@ function Main({ products, cartItems, onAdd, onRemove }) {
       </Route>
       <Route exact path="/login">
         <Login />
+      </Route>
+      <Route exact path="/wishlist">
+        <Wishlist />
       </Route>
       <Route exact path="/cart">
         <Cart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} />

@@ -4,7 +4,6 @@ import "./Product.css";
 
 function Product({ product, onAdd }) {
   const [detailsOpen, setDetailsOpen] = useState(false);
-  const [itemAvailable, setItemAvailable] = useState(true);
 
   const toggleDetails = () => {
     setDetailsOpen(!detailsOpen);
@@ -26,7 +25,7 @@ function Product({ product, onAdd }) {
         alt={product.brand}
       ></img>
       <div className="Product__summary">
-        <h2>{product.brand}</h2>
+        <h2 className="Product__brand">{product.brand}</h2>
         <p>{product.description}</p>
         <p>${product.price}</p>
       </div>
