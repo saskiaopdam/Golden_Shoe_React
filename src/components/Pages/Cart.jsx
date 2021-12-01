@@ -7,11 +7,13 @@ function Cart({ cartItems, onAdd, onRemove }) {
   const totalPrice = itemsPrice + taxPrice + shippingPrice;
   return (
     <div className="Page">
-      <h1>CART</h1>
+      <h1 className="Page__title">CART</h1>
       {cartItems.length === 0 && "Cart is Empty"}
       {cartItems.map((item) => (
         <div key={item.id}>
-          <div className="col-2">{item.brand}</div>
+          <div className="col-2">
+            {item.brand} {item.description}
+          </div>
           <div className="col-2">
             <button onClick={() => onAdd(item)} className="add">
               {" "}

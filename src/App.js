@@ -2,6 +2,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { useState } from "react";
 
 import "./App.css";
+import ScrollToTop from "./components/ScrollToTop";
 
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
@@ -38,42 +39,19 @@ function App() {
     }
   };
 
-  // const [shoeClicked, setShoeClicked] = useState(false);
-  // const [buttonClicked, setButtonClicked] = useState(false);
-  // const [cartCount, setCartCount] = useState(0);
-  // const [stockCount, setStockCount] = useState(0);
-
-  // const addToCart = () => {
-  //   setButtonClicked(true);
-  //   setCartCount(cartCount + 1);
-  //   setStockCount(stockCount - 1);
-  //   if (stockCount <= 0) {
-  //     alert("You can't buy this item at the moment.");
-  //   }
-  // };
-
-  // const showDetails = (event) => {
-  //   setShoeClicked(true);
-  //   setStockCount(event.target.value);
-  // };
-
   return (
     <div className="App">
       <Router>
-        <Header cartCount={cartItems.length} />
-        <Main
-          products={products}
-          cartItems={cartItems}
-          onAdd={onAdd}
-          onRemove={onRemove}
-          // shoeClicked={shoeClicked}
-          // buttonClicked={buttonClicked}
-          // cartCount={cartCount}
-          // stockCount={stockCount}
-          // addToCart={addToCart}
-          // showDetails={showDetails}
-        />
-        <Footer />
+        <ScrollToTop>
+          <Header cartCount={cartItems.length} />
+          <Main
+            products={products}
+            cartItems={cartItems}
+            onAdd={onAdd}
+            onRemove={onRemove}
+          />
+          <Footer />
+        </ScrollToTop>
       </Router>
     </div>
   );

@@ -1,4 +1,5 @@
 .Main {
+  display: flex;
   flex-grow: 1;
   padding: 20px;
   font-size: calc(16px + 0.5vmin);

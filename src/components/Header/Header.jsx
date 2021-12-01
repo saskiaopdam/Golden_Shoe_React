@@ -4,17 +4,7 @@ import { useState } from "react";
 import "./Header.css";
 
 function Header({ cartCount }) {
-  const [searchOpen, setSearchOpen] = useState(false);
   const [slideOpen, setSlideOpen] = useState(false);
-  const [slideSearchOpen, setSlideSearchOpen] = useState(false);
-
-  const openSearch = () => {
-    setSearchOpen(true);
-  };
-
-  const closeSearch = () => {
-    setSearchOpen(false);
-  };
 
   const toggleSlide = () => {
     setSlideOpen(!slideOpen);
@@ -22,14 +12,6 @@ function Header({ cartCount }) {
 
   const closeSlide = () => {
     setSlideOpen(false);
-  };
-
-  const openSlideSearch = () => {
-    setSlideSearchOpen(true);
-  };
-
-  const closeSlideSearch = () => {
-    setSlideSearchOpen(false);
   };
 
   return (
@@ -71,25 +53,10 @@ function Header({ cartCount }) {
         </div>
 
         <div className="Header-nav__forms">
-          <div
-            className="Header-nav__openSearch"
-            onClick={openSearch}
-            open={searchOpen}
-            aria-label="show search field"
-            style={searchOpen ? { display: "none" } : { display: "" }}
+          <Link
+            className="Header-nav__iconLink Header-nav__loginLink"
+            to="login"
           >
-            <svg
-              className="Header-nav__icon"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z" />
-            </svg>
-          </div>
-
-          <Link className="Header-nav__loginLink" to="login">
             <svg
               className="Header-nav__icon"
               xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +68,7 @@ function Header({ cartCount }) {
               <path d="M12 2c2.757 0 5 2.243 5 5.001 0 2.756-2.243 5-5 5s-5-2.244-5-5c0-2.758 2.243-5.001 5-5.001zm0-2c-3.866 0-7 3.134-7 7.001 0 3.865 3.134 7 7 7s7-3.135 7-7c0-3.867-3.134-7.001-7-7.001zm6.369 13.353c-.497.498-1.057.931-1.658 1.302 2.872 1.874 4.378 5.083 4.972 7.346h-19.387c.572-2.29 2.058-5.503 4.973-7.358-.603-.374-1.162-.811-1.658-1.312-4.258 3.072-5.611 8.506-5.611 10.669h24c0-2.142-1.44-7.557-5.631-10.647z" />
             </svg>
           </Link>
-          <Link className="Header-nav__cartLink" to="cart">
+          <Link className="Header-nav__iconLink Header-nav__cartLink" to="cart">
             <div className="Header-nav__cartLink-badge"> {cartCount}</div>
             <svg
               className="Header-nav__icon"
@@ -117,10 +84,7 @@ function Header({ cartCount }) {
         </div>
       </nav>
 
-      <div
-        className="Header-search"
-        style={searchOpen ? { display: "flex" } : { display: "none" }}
-      >
+      <div className="Header-search">
         <input
           className="Header-search__field"
           type="text"
@@ -136,9 +100,6 @@ function Header({ cartCount }) {
         >
           <path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z" />
         </svg>
-        <span className="Header-search__close" onClick={closeSearch}>
-          X
-        </span>
       </div>
 
       <nav
@@ -172,56 +133,24 @@ function Header({ cartCount }) {
         <Link className="Header-slideMenu__item" to="FAQ" onClick={closeSlide}>
           FAQ
         </Link>
-
-        {/* <hr className="Header-slideMenu__divider" /> */}
-
         <Link
-          className="Header-slideMenu__item Header-slideMenu__login"
-          to="login"
+          className="Header-slideMenu__item Header-slidemenu__login"
+          to="Login"
           onClick={closeSlide}
         >
-          <svg
-            className="Header-slideMenu__icon"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <path d="M12 2c2.757 0 5 2.243 5 5.001 0 2.756-2.243 5-5 5s-5-2.244-5-5c0-2.758 2.243-5.001 5-5.001zm0-2c-3.866 0-7 3.134-7 7.001 0 3.865 3.134 7 7 7s7-3.135 7-7c0-3.867-3.134-7.001-7-7.001zm6.369 13.353c-.497.498-1.057.931-1.658 1.302 2.872 1.874 4.378 5.083 4.972 7.346h-19.387c.572-2.29 2.058-5.503 4.973-7.358-.603-.374-1.162-.811-1.658-1.312-4.258 3.072-5.611 8.506-5.611 10.669h24c0-2.142-1.44-7.557-5.631-10.647z" />
-          </svg>
+          Login
         </Link>
 
-        <div
-          className="Header-slideMenu__item"
-          onClick={openSlideSearch}
-          open={slideSearchOpen}
-          aria-label="show search field"
-          style={slideSearchOpen ? { display: "none" } : { display: "" }}
-        >
-          <svg
-            className="Header-slideMenu__icon"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z" />
-          </svg>
-        </div>
-
-        <div
-          className="Header-search"
-          style={slideSearchOpen ? { display: "flex" } : { display: "none" }}
-        >
+        <div className="Header-slidemenu__search">
           <input
-            className="Header-search__field"
+            className="Header-slidemenu__search__field"
             type="text"
             placeholder="Search"
             aria-label="search field"
           />
 
           <svg
-            className="Header-search__icon"
+            className="Header-slidemenu__search__icon"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -229,10 +158,6 @@ function Header({ cartCount }) {
           >
             <path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z" />
           </svg>
-
-          <span className="Header-search__close" onClick={closeSlideSearch}>
-            X
-          </span>
         </div>
       </nav>
     </div>

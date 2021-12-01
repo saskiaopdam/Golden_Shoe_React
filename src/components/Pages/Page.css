@@ -1,3 +1,19 @@
-h1 {
-  margin-bottom: 10px;
+.Page {
+  max-width: 1600px;
+  margin: 0 auto;
+  background: white;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.Page__title {
+  margin-bottom: 20px;
+  color: orange;
+}
+
+.Page__display {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }

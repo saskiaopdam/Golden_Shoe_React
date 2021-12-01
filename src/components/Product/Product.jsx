@@ -1,20 +1,49 @@
+import { useState } from "react";
+
 import "./Product.css";
 
 function Product({ product, onAdd }) {
+  const [detailsOpen, setDetailsOpen] = useState(false);
+  const [itemAvailable, setItemAvailable] = useState(true);
+
+  const toggleDetails = () => {
+    setDetailsOpen(!detailsOpen);
+  };
+
+  const handleClick = (product) => {
+    if (product.stock === 0) {
+      alert("Currently out of stock. Available in 2 days.");
+    } else {
+      onAdd(product);
+    }
+  };
+
   return (
-    <div className="Product">
+    <div className="Product" onClick={toggleDetails} open={detailsOpen}>
       <img
         className="Product__image"
         src={product.image}
         alt={product.brand}
-        img
-      />
-      <h2 className="Product__brand">{product.brand}</h2>
-      <p className="Product__text">{product.description}</p>
-      <p className="Product__text">${product.price}</p>
-      <button className="Product__button" onClick={() => onAdd(product)}>
-        Add To Cart
-      </button>
+      ></img>
+      <div className="Product__summary">
+        <h2>{product.brand}</h2>
+        <p>{product.description}</p>
+        <p>${product.price}</p>
+      </div>
+
+      {detailsOpen ? (
+        <div className="Product__details">
+          <p>In stock: {product.stock}</p>
+          <button
+            className="Product__button"
+            onClick={() => {
+              handleClick(product);
+            }}
+          >
+            Add To Cart
+          </button>
+        </div>
+      ) : null}
     </div>
   );
 }

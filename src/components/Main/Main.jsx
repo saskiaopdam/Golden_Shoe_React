@@ -11,34 +11,11 @@ import Login from "../Pages/Login";
 import Cart from "../Pages/Cart";
 import FAQ from "../Pages/FAQ";
 
-function Main({
-  // stock,
-  products,
-  cartItems,
-  onAdd,
-  onRemove,
-  // cartCount,
-  // shoeClicked,
-  // buttonClicked,
-  // stockCount,
-  // addToCart,
-  // showDetails,
-}) {
+function Main({ products, cartItems, onAdd, onRemove }) {
   return (
     <div className="Main">
       <Route exact path="/">
-        <Home
-          // stock={stock}
-          products={products}
-          onAdd={onAdd}
-          // shoeClicked={shoeClicked}
-          // buttonClicked={buttonClicked}
-          // productId={productId}
-          // cartCount={cartCount}
-          // stockCount={stockCount}
-          // addToCart={addToCart}
-          // showDetails={showDetails}
-        />
+        <Home products={products} onAdd={onAdd} />
       </Route>
       <Route exact path="/men">
         <Men />
@@ -59,12 +36,7 @@ function Main({
         <Login />
       </Route>
       <Route exact path="/cart">
-        <Cart
-          // cartCount={cartCount}
-          cartItems={cartItems}
-          onAdd={onAdd}
-          onRemove={onRemove}
-        />
+        <Cart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} />
       </Route>
     </div>
   );
