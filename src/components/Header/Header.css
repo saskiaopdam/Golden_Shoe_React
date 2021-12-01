@@ -23,12 +23,12 @@
 .Header-nav__right {
   display: flex;
   /* flex-wrap: wrap; */
-  gap: 12px;
   height: 24px;
 }
 
 .Header-nav__burger {
   height: 24px;
+  margin-right: 12px;
 }
 
 .Header-nav__brand {
@@ -48,9 +48,13 @@
   color: black;
 }
 
-.Header-nav__iconLink,
 .Header-nav__iconLink {
   position: relative;
+  margin-left: 12px;
+}
+
+.Header-nav__iconLink + .Header-nav__iconLink {
+  margin-left: 12px;
 }
 
 .Header-nav__iconLink-badge {
@@ -121,11 +125,11 @@
 
 .Header-slidemenu__login {
   display: flex;
-  gap: 12px;
 }
 
 .Header-slidemenu__icon {
   filter: invert(100%);
+  margin-right: 12px;
 }
 
 @media (min-width: 600px) {
