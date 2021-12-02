@@ -12,6 +12,7 @@ import data from "./data";
 function App() {
   const { products } = data;
   const [cartItems, setCartItems] = useState([]);
+  const [searchOpen, setSearchOpen] = useState(false);
 
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
@@ -39,16 +40,25 @@ function App() {
     }
   };
 
+  const toggleSearch = () => {
+    setSearchOpen(!searchOpen);
+  };
+
   return (
     <div className="App">
       <Router>
         <ScrollToTop>
-          <Header cartCount={cartItems.length} />
+          <Header
+            cartCount={cartItems.length}
+            searchOpen={searchOpen}
+            toggleSearch={toggleSearch}
+          />
           <Main
             products={products}
             cartItems={cartItems}
             onAdd={onAdd}
             onRemove={onRemove}
+            searchOpen={searchOpen}
           />
           <Footer />
         </ScrollToTop>

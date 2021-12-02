@@ -3,7 +3,7 @@
   margin: 0 auto;
   background: white;
   flex-grow: 1;
-  padding: 1.25em;
+  padding: 1em;
 }
 
 .Page-title {
@@ -14,7 +14,7 @@
 .Page-display {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.25em;
+  gap: 1em;
 }
 
 @media (min-width: 600px) {

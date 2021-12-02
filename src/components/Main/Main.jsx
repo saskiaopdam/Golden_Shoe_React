@@ -12,9 +12,17 @@ import Login from "../Pages/Login";
 import Wishlist from "../Pages/Wishlist";
 import Cart from "../Pages/Cart";
 
-function Main({ products, cartItems, onAdd, onRemove }) {
+function Main({ products, cartItems, onAdd, onRemove, searchOpen }) {
   return (
-    <div className="Main">
+    <div
+      className="Main"
+      searchOpen={searchOpen}
+      style={
+        searchOpen
+          ? { padding: "8.2em 1em 1em 1em" }
+          : { padding: "4em 1em 1em 1em" }
+      }
+    >
       <Route exact path="/">
         <Home products={products} onAdd={onAdd} />
       </Route>

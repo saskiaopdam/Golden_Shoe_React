@@ -1,6 +1,6 @@
 .Main {
   display: flex;
   flex-grow: 1;
-  padding: 1.25em;
   background: orange;
+  /* padding defined inline, to accomodate search toggle */
 }

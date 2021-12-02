@@ -3,9 +3,8 @@ import { useState } from "react";
 
 import "./Header.css";
 
-function Header({ cartCount }) {
+function Header({ cartCount, searchOpen, toggleSearch }) {
   const [slideOpen, setSlideOpen] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
 
   const toggleSlide = () => {
     setSlideOpen(!slideOpen);
@@ -13,10 +12,6 @@ function Header({ cartCount }) {
 
   const closeSlide = () => {
     setSlideOpen(false);
-  };
-
-  const toggleSearch = () => {
-    setSearchOpen(!searchOpen);
   };
 
   return (

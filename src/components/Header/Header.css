@@ -1,19 +1,17 @@
 .Header {
-  flex-shrink: 0;
-  /* padding: 64px 20px 0 20px; */
-  padding: 3.2em 1em 0 1em;
-  font-family: "Raleway", sans-serif;
-  background: orange;
-}
-
-.Header-nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1;
-  padding: 1em;
+  flex-shrink: 0;
+  font-family: "Raleway", sans-serif;
+  background: orange;
   box-shadow: rgba(27, 31, 35, 0.15) 0px 1px 15px 0px;
+}
+
+.Header-nav {
+  padding: 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -86,7 +84,8 @@
 .Header-search {
   width: 100%;
   position: relative;
-  margin-top: 1em;
+  padding: 1em;
+  background: blue;
 }
 
 .Header-search__field {
@@ -101,8 +100,9 @@
 
 .Header-search__icon {
   position: absolute;
-  top: 0.75em;
-  right: 0.75em;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1.5em;
   width: 1em;
   height: 1em;
   opacity: 0.5;
@@ -112,9 +112,9 @@
   position: fixed;
   background: orange;
   width: 100%;
-  top: 4em;
-  height: 100%;
-  padding: 1.25em;
+  top: 3em;
+  bottom: 0;
+  padding: 1em;
   left: -100%;
   z-index: 1;
   transition: top 0.7s ease;
@@ -125,7 +125,6 @@
 .Header-slideMenu__item {
   text-decoration: none;
   color: white;
-  font-size: 1.25em;
 }
 
 .Header-slideMenu__item + .Header-slideMenu__item {
@@ -156,56 +155,9 @@
 }
 
 @media (min-width: 600px) {
-  .Header {
-    padding: 4em 1.25em 0 1.25em;
-  }
-
-  .Header-nav {
-    padding: 1.25em;
-  }
-
-  .Header-nav__left,
-  .Header-nav__right {
-    height: 1.25em;
-  }
-
-  .Header-nav__burger {
-    height: 1.25em;
-    margin-right: 1em;
-  }
-
-  .Header-nav__brand {
-    height: 1.25em;
-    margin: 0 1em;
-  }
-
-  .Header-nav__icon {
-    width: 1.25em;
-    height: 1.25em;
-  }
-
-  .Header-nav__iconLink {
-    height: 1.25em;
-  }
-
-  .Header-nav__iconLink:first-child {
-    margin-right: 1em;
-  }
-
-  .Header-nav__iconLink-badge {
-    width: 1.25em;
-    height: 1.25em;
-    top: -0.625em;
-    right: 1em;
-  }
-
   .Header-search {
     max-width: 600px;
-    margin: 1.25em auto 0 auto;
-  }
-
-  .Header-search__field {
-    padding: 1.25em;
+    margin: 0 auto;
   }
 
   .Header-slideMenu {
