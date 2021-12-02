@@ -28,3 +28,9 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+@media (min-width: 1200px) {
+  .Page-display {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
