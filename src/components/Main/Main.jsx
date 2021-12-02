@@ -19,7 +19,7 @@ function Main({ products, cartItems, onAdd, onRemove, searchOpen }) {
       searchOpen={searchOpen}
       style={
         searchOpen
-          ? { padding: "8.2em 1em 1em 1em" }
+          ? { padding: "7.2em 1em 1em 1em" }
           : { padding: "4em 1em 1em 1em" }
       }
     >

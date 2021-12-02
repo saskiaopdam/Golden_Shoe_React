@@ -34,7 +34,6 @@
 
 @media (min-width: 600px) {
   .Footer {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
