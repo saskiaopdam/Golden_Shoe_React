@@ -3,9 +3,7 @@ import "./Footer.css";
 function Footer() {
   return (
     <div className="Footer">
-      <span className="Footer-copyright">
-        © 2021 Golden Shoe. All rights reserved.
-      </span>
+      <span className="Footer-copyright">© 2021 Golden Shoe</span>
       <span className="Footer-socialMedia">
         <a
           className="Footer-socialMedia__link"

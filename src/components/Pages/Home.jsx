@@ -8,8 +8,8 @@ function Home({ products, onAdd }) {
 
   return (
     <div className="Page">
-      <h1 className="Page__title">HOME</h1>
-      <div className="Page__display">{shoes}</div>
+      <h1 className="Page-title">HOME</h1>
+      <div className="Page-display">{shoes}</div>
     </div>
   );
 }

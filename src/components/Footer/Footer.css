@@ -1,25 +1,31 @@
 .Footer {
   flex-shrink: 0;
   background: white;
-  padding: 20px;
+  padding: 1em;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-  font-size: 14px;
 }
 
 .Footer-copyright {
   text-align: center;
+  font-size: 0.75em;
 }
 
 .Footer-socialMedia {
   display: flex;
-  height: 24px;
-  margin-bottom: 15px;
+  height: 1em;
+  margin-bottom: 0.75em;
 }
 
 .Footer-socialMedia__link + .Footer-socialMedia__link {
-  margin-left: 18px;
+  height: 1em;
+  margin-left: 0.5em;
+}
+
+.Footer-socialMedia__icon {
+  width: 1em;
+  height: 1em;
 }
 
 .Footer-socialMedia__icon:hover {
@@ -31,9 +37,15 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 1.25em;
   }
 
   .Footer-socialMedia {
     margin-bottom: 0;
+  }
+
+  .Footer-socialMedia__icon {
+    width: 1.25em;
+    height: 1.25em;
   }
 }
