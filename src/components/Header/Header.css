@@ -145,6 +145,16 @@
   margin-right: 0.5em;
 }
 
+@media (min-width: 350px) {
+  .Header-nav__burger {
+    margin-right: 0.75em;
+  }
+
+  .Header-nav__iconLink:first-child {
+    margin-right: 0.75em;
+  }
+}
+
 @media (min-width: 600px) {
   .Header {
     padding: 4em 1.25em 0 1.25em;
