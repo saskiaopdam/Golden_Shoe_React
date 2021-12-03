@@ -2,6 +2,11 @@
   flex-shrink: 0;
   background: white;
   padding: 1em;
+}
+
+.Footer-inner {
+  max-width: 1600px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -33,7 +38,7 @@
 }
 
 @media (min-width: 600px) {
-  .Footer {
+  .Footer-inner {
     flex-direction: row;
     justify-content: space-between;
   }

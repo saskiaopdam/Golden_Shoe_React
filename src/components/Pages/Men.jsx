@@ -1,45 +1,19 @@
 import "./Page.css";
+import Product from "../Product/Product";
 
-function Men() {
+function Men({ products, onAdd }) {
+  const maleShoes = products
+    .filter((product) => product.gender === "male")
+    .map((product) => (
+      <Product key={product.id} product={product} onAdd={onAdd} />
+    ));
+
+  console.log({ maleShoes });
+
   return (
     <div className="Page">
-      <h1 className="Page-title">MEN</h1>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime ducimus
-        delectus voluptate unde laborum nihil, sapiente, numquam id magnam sed
-        minima blanditiis ipsa earum veniam fugiat illum in nulla
-        exercitationem.
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime ducimus
-        delectus voluptate unde laborum nihil, sapiente, numquam id magnam sed
-        minima blanditiis ipsa earum veniam fugiat illum in nulla
-        exercitationem.
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime ducimus
-        delectus voluptate unde laborum nihil, sapiente, numquam id magnam sed
-        minima blanditiis ipsa earum veniam fugiat illum in nulla
-        exercitationem.
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime ducimus
-        delectus voluptate unde laborum nihil, sapiente, numquam id magnam sed
-        minima blanditiis ipsa earum veniam fugiat illum in nulla
-        exercitationem.
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime ducimus
-        delectus voluptate unde laborum nihil, sapiente, numquam id magnam sed
-        minima blanditiis ipsa earum veniam fugiat illum in nulla
-        exercitationem.
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime ducimus
-        delectus voluptate unde laborum nihil, sapiente, numquam id magnam sed
-        minima blanditiis ipsa earum veniam fugiat illum in nulla
-        exercitationem.
-      </p>
+      <h1 className="Page-title">Men's shoes</h1>
+      <div className="Page-display">{maleShoes}</div>
     </div>
   );
 }

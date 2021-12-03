@@ -1,4 +1,5 @@
 import "./Page.css";
+import "./Cart.css";
 
 function Cart({ cartItems, onAdd, onRemove }) {
   const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
@@ -7,56 +8,63 @@ function Cart({ cartItems, onAdd, onRemove }) {
   const totalPrice = itemsPrice + taxPrice + shippingPrice;
   return (
     <div className="Page">
-      <h1 className="Page-title">CART</h1>
+      <h1 className="Page-title">Cart</h1>
       {cartItems.length === 0 && "Cart is Empty"}
       {cartItems.map((item) => (
-        <div key={item.id}>
-          <div className="col-2">
-            {item.brand} {item.description}
+        <div key={item.id} className="Cart-item">
+          <div className="Cart-item__id">Product Id: {item.id}</div>
+          <div>
+            {item.qty} x ${item.price.toFixed(2)}
           </div>
-          <div className="col-2">
-            <button onClick={() => onAdd(item)} className="add">
+          <div>
+            <button
+              onClick={() => onAdd(item)}
+              className="Cart-item__addButton"
+            >
               {" "}
               +
             </button>
-            <button onClick={() => onRemove(item)} className="add">
+            <button
+              onClick={() => onRemove(item)}
+              className="Cart-item__removeButton"
+            >
               {" "}
               -
             </button>
           </div>
-          <div className="col-2 text-right">
-            {item.qty} x ${item.price.toFixed(2)}
-          </div>
         </div>
       ))}
       {cartItems.length !== 0 && (
-        <>
-          <hr></hr>
-          <div className="row">
-            <div className="col-2">Items Price</div>
-            <div className="col-1 text-right">${itemsPrice.toFixed(2)}</div>
+        <div className="Cart-priceCount">
+          <div className="Cart-priceRow">
+            <div>Items Price</div>
+            <div>${itemsPrice.toFixed(2)}</div>
           </div>
-          <div className="row">
-            <div className="col-2">Tax Price</div>
-            <div className="col-1 text-right">${taxPrice.toFixed(2)}</div>
+          <div className="Cart-priceRow">
+            <div>Tax Price</div>
+            <div>${taxPrice.toFixed(2)}</div>
           </div>
-          <div className="row">
-            <div className="col-2">Shipping Price</div>
-            <div className="col-1 text-right">${shippingPrice.toFixed(2)}</div>
+          <div className="Cart-priceRow">
+            <div>Shipping Price</div>
+            <div>${shippingPrice.toFixed(2)}</div>
           </div>
-          <div className="row">
-            <div className="col-2">Total Price</div>
-            <div className="col-1 text-right">
+          <div className="Cart-priceRow">
+            <div>
+              <strong>Total Price</strong>
+            </div>
+            <div>
               <strong>${totalPrice.toFixed(2)}</strong>
             </div>
-            <hr></hr>
-            <div className="row">
-              <button onClick={() => alert("implement checkout")}>
-                Checkout
-              </button>
-            </div>
           </div>
-        </>
+          <div>
+            <button
+              className="Cart-item__checkoutButton"
+              onClick={() => alert("implement checkout")}
+            >
+              Checkout
+            </button>
+          </div>
+        </div>
       )}
     </div>
   );
