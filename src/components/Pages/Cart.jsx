@@ -9,7 +9,7 @@ function Cart({ cartItems, onAdd, onRemove }) {
   return (
     <div className="Page">
       <h1 className="Page-title">Cart</h1>
-      {cartItems.length === 0 && "Cart is Empty"}
+      {cartItems.length === 0 && "Cart is empty"}
       {cartItems.map((item) => (
         <div key={item.id} className="Cart-item">
           <div className="Cart-item__id">Product Id: {item.id}</div>
